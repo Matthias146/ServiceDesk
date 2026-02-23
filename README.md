@@ -1,59 +1,76 @@
-# ServiceDesk
+# ServiceDesk Pro
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.0.1.
+ServiceDesk Pro ist ein modernes **B2B / Enterprise-Ticket-System** als Portfolio- und Lernprojekt.  
+Das Ziel des Projekts ist es, eine realistische Admin-/Operations-App mit **sauberer Angular-Architektur** aufzubauen – inklusive Rollen, Ticket-Management, Dashboard und später Backend-Anbindung.
 
-## Development server
+Der Fokus liegt auf **modernem Angular (Standalone)**, einer klaren Projektstruktur und einer professionellen, iterativen Entwicklung mit kleinen Git-Commits.
 
-To start a local development server, run:
+---
 
+## Tech Stack
+
+- **Angular** (Standalone)
+- **TypeScript**
+- **SCSS**
+- **Angular Router**
+
+> Geplant für spätere Phasen:
+- NgRx Signal Store
+- NestJS
+- TypeORM
+- JWT Auth
+
+---
+
+## Project Structure
+
+Die App ist von Anfang an in einer **Enterprise-ähnlichen Struktur** aufgebaut:
+
+- `core/`  
+  Globale App-Bereiche wie Layout, Auth, Guards, Services (wird in den nächsten Schritten ausgebaut)
+
+- `shared/`  
+  Wiederverwendbare Komponenten, Utilities und gemeinsame Bausteine
+
+- `features/`  
+  Fachliche Module / Seiten der App, z. B.:
+  - Dashboard
+  - Tickets
+  - Customers
+  - Users
+  - Audit Log
+  - Settings
+  - Login / Auth
+
+---
+
+## Current Status
+
+### Bereits umgesetzt
+- Angular-Projekt erstellt (Standalone + SCSS + Routing)
+- Grundstruktur mit `core`, `shared`, `features` angelegt
+- Erste Feature-Seiten erstellt (Platzhalter)
+- Base Routing eingerichtet
+- `AppComponent` als schlanker Root mit `router-outlet`
+
+### Aktuell in Arbeit
+- App Shell (Header + Sidebar + Content Layout)
+
+### Nächste Schritte
+- App Shell in Routing integrieren (Child Routes)
+- Login-Seite außerhalb der Shell
+- Mock Auth + Rollenmodell
+- Guards vorbereiten
+
+---
+
+## Getting Started
+
+### Voraussetzungen
+- Node.js (empfohlen: aktuelle LTS-Version)
+- npm
+- Angular CLI
+
+### Installation
 ```bash
-ng serve
-```
-
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
-
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
-```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+npm install

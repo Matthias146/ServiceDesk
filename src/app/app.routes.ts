@@ -6,15 +6,23 @@ import { Customers } from './features/customers/customers';
 import { Users } from './features/users/users';
 import { AuditLog } from './features/audit-log/audit-log';
 import { Settings } from './features/settings/settings';
+import { AppShell } from './core/layout/app-shell/app-shell';
 
 export const routes: Routes = [
   { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
-  { path: 'dashboard', component: Dashboard },
   { path: 'login', component: Login },
-  { path: 'tickets', component: Tickets },
-  { path: 'customers', component: Customers },
-  { path: 'users', component: Users },
-  { path: 'audit-log', component: AuditLog },
-  { path: 'settings', component: Settings },
+  {
+    path: '',
+    component: AppShell,
+    children: [
+      { path: 'dashboard', component: Dashboard },
+
+      { path: 'tickets', component: Tickets },
+      { path: 'customers', component: Customers },
+      { path: 'users', component: Users },
+      { path: 'audit-log', component: AuditLog },
+      { path: 'settings', component: Settings },
+    ],
+  },
   { path: '**', redirectTo: 'dashboard' },
 ];
