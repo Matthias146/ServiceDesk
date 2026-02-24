@@ -1,5 +1,9 @@
-<app-header />
-<aside><app-sidebar /></aside>
-<main>
-  <router-outlet />
-</main>
+<section class="app-layout">
+  <app-header />
+  <div class="main-container">
+    <app-sidebar />
+    <main class="content">
+      <router-outlet />
+    </main>
+  </div>
+</section>

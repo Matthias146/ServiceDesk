@@ -1,0 +1,34 @@
+.sidenav {
+  width: 250px;
+  background-color: var(--sidebar-bg);
+  color: var(--text-light);
+  padding: var(--spacing-md);
+  height: 100%;
+
+  ul {
+    list-style: none;
+
+    li {
+      margin-bottom: var(--spacing-sm);
+
+      a {
+        display: block;
+        padding: var(--spacing-sm) var(--spacing-md);
+        text-decoration: none;
+        color: var(--text-light);
+        border-radius: 4px;
+        transition: background-color 0.2s;
+
+        &:hover {
+          background-color: rgba(255, 255, 255, 0.1);
+        }
+
+        &.active {
+          background-color: var(--primary-color);
+          font-weight: bold;
+          border-left: 4px solid #3b82f6;
+        }
+      }
+    }
+  }
+}
