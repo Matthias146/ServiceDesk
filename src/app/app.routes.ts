@@ -1,6 +1,6 @@
 import { Routes } from '@angular/router';
 import { Dashboard } from './features/dashboard/dashboard';
-import { Login } from './features/login/login';
+import { LoginPage } from './features/auth/login/login-page';
 import { Tickets } from './features/tickets/tickets';
 import { Customers } from './features/customers/customers';
 import { Users } from './features/users/users';
@@ -10,7 +10,7 @@ import { AppShell } from './core/layout/app-shell/app-shell';
 
 export const routes: Routes = [
   { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
-  { path: 'login', component: Login },
+  { path: 'login', component: LoginPage },
   {
     path: '',
     component: AppShell,

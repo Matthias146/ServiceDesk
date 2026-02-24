@@ -54,13 +54,13 @@ Die App ist von Anfang an in einer **Enterprise-ähnlichen Struktur** aufgebaut:
 - `AppComponent` als schlanker Root mit `router-outlet`
 - App Shell in Routing integrieren (Child Routes)
 - Login-Seite außerhalb der Shell
-
-
-### Aktuell in Arbeit
 - App Shell (Header + Sidebar + Content Layout)
 
-### Nächste Schritte
+### Aktuell in Arbeit
 - Mock Auth + Rollenmodell
+
+
+### Nächste Schritte
 - Guards vorbereiten
 
 ---
