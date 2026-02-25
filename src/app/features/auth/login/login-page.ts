@@ -26,7 +26,10 @@ export class LoginPage {
   });
 
   onSubmit() {
-    if (this.loginForm.invalid) return;
+    if (this.loginForm.invalid) {
+      this.loginForm.markAllAsTouched();
+      return;
+    }
     const { name, role } = this.loginForm.getRawValue();
     const user: User = {
       id: 1,
