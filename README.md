@@ -55,6 +55,9 @@ Die App ist von Anfang an in einer **Enterprise-ähnlichen Struktur** aufgebaut:
 - App Shell in Routing integrieren (Child Routes)
 - Login-Seite außerhalb der Shell
 - App Shell (Header + Sidebar + Content Layout)
+- Header zeigt eingeloggten Benutzer und Rolle
+- Logout-Button integriert
+- Header reagiert auf Auth-State
 
 ### Aktuell in Arbeit
 - Mock Auth + Rollenmodell

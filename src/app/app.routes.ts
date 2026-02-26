@@ -7,6 +7,7 @@ import { Users } from './features/users/users';
 import { AuditLog } from './features/audit-log/audit-log';
 import { Settings } from './features/settings/settings';
 import { AppShell } from './core/layout/app-shell/app-shell';
+import { authGuard } from './core/guards/auth.guard';
 
 export const routes: Routes = [
   { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
@@ -14,9 +15,9 @@ export const routes: Routes = [
   {
     path: '',
     component: AppShell,
+    canActivateChild: [authGuard],
     children: [
       { path: 'dashboard', component: Dashboard },
-
       { path: 'tickets', component: Tickets },
       { path: 'customers', component: Customers },
       { path: 'users', component: Users },
