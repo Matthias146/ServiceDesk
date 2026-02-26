@@ -1,6 +1,9 @@
 <header class="topbar">
   <div class="logo">Service Desk</div>
-  <div class="user-profile">
-    <span>Eingeloggt als: User</span>
-  </div>
+  @if (isLoggedIn()) {
+    <div class="user-profile">
+      <span>Eingeloggt als: {{ userName }} ( {{ userRole }} )</span>
+    </div>
+    <button class="btn-primary" (click)="logout()">Logout</button>
+  }
 </header>
